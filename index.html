@@ -7,42 +7,88 @@
     
     <!-- css external -->
     <link rel="stylesheet" href="css\style.css">
+
+    <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <!-- header -->
-    <header>
+    <header class="main-header">
 
         <!-- logo -->
-        <div>
-            
-        </div>
+        <div class="logo"></div>
         
         <!-- navigation menu -->
-        <nav>
-            <a href="#home-page" >Home</a>
-            <a href="#our-profile-page" >Our Profile</a>
-            <a href="#portfolio-page" >Portfolio</a>
-            <a href="#message-us-page" >Message Us</a>
+        <nav >
+            <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#home-page" >Home</a>
+            <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#my-profile-page" >My Profile</a>
+            <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#portfolio-page" >Portfolio</a>
+            <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#message-me-page" >Message Me</a>
         </nav>
 
     </header>
-</body>
+
+    <hr />
+
     <!-- main content -->
     <main>
+
         <!-- home page -->
-        <section id="home-page"></section>
-        <!-- our Profile page -->
-        <section id="our-profile-page"></section>
+        <section>
+          <div class="font-sans text-5xl leading-none font-extrabold tracking-tight" style="text-align: center;">
+            <span class="bg-gradient-to-l from-indigo-600 to-pink-500 box-decoration-clone px-2 leading-[4.0rem] text-white" id="greeting">Hello<br>World</span>
+          </div>
+        </section>
+        <!-- <section id="home-page" class="min-h-[500px] text-center"> -->
+            <!-- <h2 class="text-xl font-bold" id="greeting">Welcome to My Website!</h2> -->
+            <!-- <p class="mt-2">blahblahblah</p> -->
+            <!-- <div class="flex flex-col"> -->
+        <!-- </section> -->
+
+        <!-- our profile page -->
+        <section id="my-profile-page" class="min-h-[500px] text-center">
+            <h2 class="text-xl font-bold">My Profile</h2>
+            <p class="mt-2">so yeah i been trying to learn coding and stuffs so now they asked me to make a website about myself, which kinda, you know, idk.</p>
+        </section>
+
         <!-- portfolio page -->
-        <section id="portfolio-page"></section>
+        <section id="portfolio-page" class="min-h-[500px] text-center">
+            <h2 class="text-xl font-bold">Portfolio</h2>
+            <p class="mt-2">here are some pictures, look at it</p>
+        </section>
+
         <!-- message us page -->
-        <section id="message-us-page"></section>
+        <section id="message-me-page" class="min-h-[500px] max-w-lg mx-auto">
+            <header>
+                <h2 class="text-xl font-bold" style="margin-bottom: 20px;">Yo write something here for me!</h2>
+            </header>
+
+            <!-- form -->
+            <form>
+                <div class="mb-4">
+                    <label class="block mb-2" for="name">Name:</label>
+                    <input class="w-full p-2 border rounded" type="text" id="name" name="name" required placeholder="-----"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="email">Email:</label>
+                    <input class="w-full p-2 border rounded" type="email" id="email" name="email" required placeholder="-----" />
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="message">Message:</label>
+                    <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5"
+                        required placeholder="-----"></textarea>
+                </div>
+                <button class="px-4 py-2 bg-blue-500 text-white rounded" type="submit">Send</button>
+            </form>
+        </section>
     </main>
-<hr>
+    <hr />
+
     <!-- footer -->
-    <footer></footer>
+    <footer>
+          <p class="text-center p-4">© 2025 Allan Company. All rights reserved.</p>
+    </footer>
 
     <!-- js external -->
     <script src="js\script.js"></script>
