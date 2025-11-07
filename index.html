@@ -49,7 +49,9 @@
         <!-- our profile page -->
         <section id="my-profile-page" class="text-center">
             <h2 class="text-xl font-bold h1">My Profile</h2>
-            <p class="mt-2">so yeah i been trying to learn coding and stuffs so now they asked me to make a website about myself, which kinda, you know, idk.</p>
+            <p class="mt-2 text">so yeah i been trying to learn coding and stuffs so now they asked me to make a website about myself, which kinda, you know, idk.</p>
+            <div class="selfimage"></div>
+            <p class="text pt-2">Here's a pic of me, very creative, very amusing, oh my god beautiful, amazing.</p>
         </section>
 
         <!-- portfolio page -->
@@ -79,15 +81,21 @@
             <body>
                 <form id="myForm">
                     <div id="errorMessage1" class="error-message">Invalid Input</div>
-                    <input type="text" id="inputField1" placeholder="Name:" required/>
+                    <input oninput="nameoutput(this)" type="text" id="inputField1" placeholder="Name:" required/>
                     <div id="errorMessage2" class="error-message">Invalid Input</div>
-                    <input type="text" id="inputField2" placeholder="Email:" required/>
+                    <input oninput="emailoutput(this)" type="text" id="inputField2" placeholder="Email:" required/>
                     <div id="errorMessage3" class="error-message">Invalid Input</div>
-                    <textarea type="text" id="inputField3" placeholder="Messages" required></textarea>
-                    <button type="button" onclick="validateInput()">Submit</button>
+                    <textarea oninput="messageoutput(this)" type="text" id="inputField3" placeholder="Messages" required></textarea>
+                    <button type="button" id="clicked" onclick="validateInput()">Submit</button>
                 </form>
             </body>
             
+        </section>
+        <section class="output" style="padding-left: 20px;">
+            <!-- output box -->
+                <p id="nameoutput">Name:</p>
+                <p id="emailoutput">Email:</p>
+                <p id="messageoutput">Message:</p>  
         </section>
     </main>
     <hr />

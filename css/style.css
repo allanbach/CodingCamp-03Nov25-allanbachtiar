@@ -6,7 +6,15 @@
     background-image: url(../assets/logo.png);
     background-size: cover;
 }
-
+.selfimage {
+    width: 720px;
+    height: 1280px;
+    background-color: darkgray;
+    border-radius: 0%;
+    background-image: url(../assets/pic-4.gif);
+    background-size: cover;
+    justify-self: center;
+}
 .main-header{
     display: flex;
     align-items: center;
@@ -91,4 +99,18 @@ button {
   50% {transform: translateX(5px);}
   75% {transform: translateX(-5px);}
   100% {transform: translateX(0);}
+}
+
+.output {
+    display: inline-block;
+
+    color: #1b4630;
+    background-color: #a4d4c2;
+    margin-bottom: 100px;
+    text-align: left;
+    width: min(90%, 25em);
+    height: auto;
+    padding: 1em;
+    border-radius: 0.3em;
+    
 }

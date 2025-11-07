@@ -66,3 +66,15 @@ function validateInput() {
 }
 }
 }
+
+function nameoutput(name){
+document.getElementById('nameoutput').innerText = 'Name: ' + name.value
+}
+
+function emailoutput(name){
+document.getElementById('emailoutput').innerText = 'Email Address: ' + name.value;
+}
+
+function messageoutput(name){
+document.getElementById('messageoutput').innerText = 'Messages: ' + name.value;
+}
