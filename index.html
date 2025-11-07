@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png">
     
     <!-- css external -->
     <link rel="stylesheet" href="css\style.css">
@@ -15,29 +16,28 @@
 <body>
     <!-- header -->
     <header class="main-header">
-
-        <!-- logo -->
-        <div class="logo"></div>
+            <!-- logo -->
+            <div class="logo"></div>
         
         <!-- navigation menu -->
-        <nav >
-            <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#home-page" >Home</a>
-            <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#my-profile-page" >My Profile</a>
-            <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#portfolio-page" >Portfolio</a>
-            <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#message-me-page" >Message Me</a>
-        </nav>
-
+            <nav>
+                <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#home-page" >Home</a>
+                <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#my-profile-page" >My Profile</a>
+                <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#portfolio-page" >Portfolio</a>
+                <a class="border border-solid rounded p-2" style="margin-right: 10px" href="#message-me-page" >Message Me</a>
+            </nav>
     </header>
 
-    <hr />
 
+    <br />
+    <br />
     <!-- main content -->
     <main>
 
         <!-- home page -->
         <section>
-          <div class="font-sans text-5xl leading-none font-extrabold tracking-tight" style="text-align: center;">
-            <span class="bg-gradient-to-l from-indigo-600 to-pink-500 box-decoration-clone px-2 leading-[4.0rem] text-white" id="greeting">Hello<br>World</span>
+          <div class="font-sans text-5xl leading-none font-extrabold tracking-tight rotate-1 mt-3 mb-10" style="text-align: center;">
+            <span class="bg-gradient-to-l from-zinc-500 to-zinc-900 to-75% box-decoration-clone px-2 leading-[3.5rem] text-white" id="greeting">Hello<br>World</span>
           </div>
         </section>
         <!-- <section id="home-page" class="min-h-[500px] text-center"> -->
@@ -47,40 +47,47 @@
         <!-- </section> -->
 
         <!-- our profile page -->
-        <section id="my-profile-page" class="min-h-[500px] text-center">
-            <h2 class="text-xl font-bold">My Profile</h2>
+        <section id="my-profile-page" class="text-center">
+            <h2 class="text-xl font-bold h1">My Profile</h2>
             <p class="mt-2">so yeah i been trying to learn coding and stuffs so now they asked me to make a website about myself, which kinda, you know, idk.</p>
         </section>
 
         <!-- portfolio page -->
         <section id="portfolio-page" class="min-h-[500px] text-center">
-            <h2 class="text-xl font-bold">Portfolio</h2>
-            <p class="mt-2">here are some pictures, look at it</p>
+            <h2 class="text-xl font-bold h1">Portfolio</h2>
+            <p class="mt-2 text">here are some pictures, look at it</p>
+            <section class="portfolio">
+                <div><img src="https://picsum.photos/200/300?random=1"></div>
+                <div><img src="https://picsum.photos/200/300?random=2"></div>
+                <div><img src="https://picsum.photos/200/300?random=3"></div>
+                <div class="break"></div>
+                <div><img src="https://picsum.photos/200/300?random=4"></div>
+                <div><img src="https://picsum.photos/200/300?random=5"></div>
+                <div><img src="https://picsum.photos/200/300?random=6"></div>                
+                
+            </section>
+            <p class="text pt-2">Good pics arent they?</p>
         </section>
 
         <!-- message us page -->
-        <section id="message-me-page" class="min-h-[500px] max-w-lg mx-auto">
+        <section id="message-me-page" class="min-h-[500px] text-center">
             <header>
-                <h2 class="text-xl font-bold" style="margin-bottom: 20px;">Yo write something here for me!</h2>
+                <h2 class="text-xl font-bold h1" style="margin-bottom: 20px;">Yo write something here for me!</h2>
             </header>
 
             <!-- form -->
-            <form>
-                <div class="mb-4">
-                    <label class="block mb-2" for="name">Name:</label>
-                    <input class="w-full p-2 border rounded" type="text" id="name" name="name" required placeholder="-----"/>
-                </div>
-                <div class="mb-4">
-                    <label class="block mb-2" for="email">Email:</label>
-                    <input class="w-full p-2 border rounded" type="email" id="email" name="email" required placeholder="-----" />
-                </div>
-                <div class="mb-4">
-                    <label class="block mb-2" for="message">Message:</label>
-                    <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5"
-                        required placeholder="-----"></textarea>
-                </div>
-                <button class="px-4 py-2 bg-blue-500 text-white rounded" type="submit">Send</button>
-            </form>
+            <body>
+                <form id="myForm">
+                    <div id="errorMessage1" class="error-message">Invalid Input</div>
+                    <input type="text" id="inputField1" placeholder="Name:" required/>
+                    <div id="errorMessage2" class="error-message">Invalid Input</div>
+                    <input type="text" id="inputField2" placeholder="Email:" required/>
+                    <div id="errorMessage3" class="error-message">Invalid Input</div>
+                    <textarea type="text" id="inputField3" placeholder="Messages" required></textarea>
+                    <button type="button" onclick="validateInput()">Submit</button>
+                </form>
+            </body>
+            
         </section>
     </main>
     <hr />
